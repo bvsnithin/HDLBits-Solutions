@@ -15,6 +15,9 @@ module top_module(
             for(int i = 1; i<511; i = i + 1) begin
                 q[i] <= q[i-1] ^ q[i+1];
             end
+
+			/* q <= {1'b0, q[511:1]} ^ {q[510:0], 1'b0}; */ //This can also be used instead of a for loop. 
+
         end
     end
     
